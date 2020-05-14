@@ -14,7 +14,7 @@ job('NodeJS Docker example') {
     }
     steps {
         dockerBuildAndPublish {
-            repositoryName('enesccinar/docker-nodejs-demo') // docker repo name on dockerhub
+            repositoryName('enesccinar/docker-demo') // docker repo name on dockerhub
             tag('${GIT_REVISION,length=9}') // taging with unique id/sha. if we leave it empty, it would be latest
             registryCredentials('dockerhub')
             forcePull(false) // http://jenkinsci.github.io/job-dsl-plugin/#method/javaposse.jobdsl.dsl.helpers.step.StepContext.dockerBuildAndPublish
